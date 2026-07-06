@@ -1,7 +1,7 @@
 -- (Launcher, Updater & Self-Installer)
 -- ASCII/English Only to avoid encoding issues in CC: Tweaked
 
-local LAUNCHER_PASTE = "install.lua"
+local LAUNCHER_PASTE = "installer.lua"
 local SERVER_PASTE = "server.lua"
 local CLIENT_PASTE = "client.lua"
 
@@ -49,11 +49,11 @@ local function checkSelfInstallation()
         local success = downloadFile(LAUNCHER_PASTE, LAUNCHER_FILE)
         if success then
             term.setTextColor(colors.green)
-            print("Successfully installed! Now you can run it using: plunder")
+            print("Successfully installed! Now you can run it using: tanks")
             sleep(1.5)
         else
             term.setTextColor(colors.red)
-            print("Warning: Could not create 'plunder' shortcut.")
+            print("Warning: Could not create game shortcut.")
             sleep(2)
         end
     end
